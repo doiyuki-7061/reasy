@@ -40,6 +40,7 @@ const BookForm = ({
       />
       <br />
       <RatingStars rating={rating} onChange={setRating} />
+      <br />
       <button onClick={handleAddBooks}>本棚に追加</button>
       {add && <div className="add-msg">追加しました</div>}
     </div>
