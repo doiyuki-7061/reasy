@@ -1,15 +1,15 @@
 {
   "files": {
-    "main.css": "/reasy/static/css/main.5a574e8d.css",
-    "main.js": "/reasy/static/js/main.5600240b.js",
+    "main.css": "/reasy/static/css/main.0c148344.css",
+    "main.js": "/reasy/static/js/main.b7251707.js",
     "static/js/453.34320eae.chunk.js": "/reasy/static/js/453.34320eae.chunk.js",
     "index.html": "/reasy/index.html",
-    "main.5a574e8d.css.map": "/reasy/static/css/main.5a574e8d.css.map",
-    "main.5600240b.js.map": "/reasy/static/js/main.5600240b.js.map",
+    "main.0c148344.css.map": "/reasy/static/css/main.0c148344.css.map",
+    "main.b7251707.js.map": "/reasy/static/js/main.b7251707.js.map",
     "453.34320eae.chunk.js.map": "/reasy/static/js/453.34320eae.chunk.js.map"
   },
   "entrypoints": [
-    "static/css/main.5a574e8d.css",
-    "static/js/main.5600240b.js"
+    "static/css/main.0c148344.css",
+    "static/js/main.b7251707.js"
   ]
 }
