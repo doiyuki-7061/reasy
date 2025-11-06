@@ -1,0 +1,15 @@
+{
+  "files": {
+    "main.css": "/reasy/static/css/main.59f38461.css",
+    "main.js": "/reasy/static/js/main.8a2549cc.js",
+    "static/js/453.34320eae.chunk.js": "/reasy/static/js/453.34320eae.chunk.js",
+    "index.html": "/reasy/index.html",
+    "main.59f38461.css.map": "/reasy/static/css/main.59f38461.css.map",
+    "main.8a2549cc.js.map": "/reasy/static/js/main.8a2549cc.js.map",
+    "453.34320eae.chunk.js.map": "/reasy/static/js/453.34320eae.chunk.js.map"
+  },
+  "entrypoints": [
+    "static/css/main.59f38461.css",
+    "static/js/main.8a2549cc.js"
+  ]
+}
