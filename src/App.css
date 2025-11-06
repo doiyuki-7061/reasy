@@ -1,38 +1,297 @@
-.App {
-  text-align: center;
+/* ==================
+       全体適用 
+   ==================*/
+
+body {
+  text-align:center;
 }
 
-.App-logo {
-  height: 40vmin;
-  pointer-events: none;
+li {
+  list-style: none;
 }
 
-@media (prefers-reduced-motion: no-preference) {
-  .App-logo {
-    animation: App-logo-spin infinite 20s linear;
+button {
+  font-size:1rem;
+  font-weight: bold;
+  color:white;
+  background-color:rgb(0, 140, 255);
+  padding:10px 20px;
+  border:none;
+  border-radius: 20px;
+  box-shadow: none;
+}
+
+button:hover {
+  background-color: rgb(0, 68, 255);
+  cursor:pointer;
+  transform:translateY(-2px);
+  box-shadow: 4px 4px gainsboro;
+  transition: all 0.5s;
+}
+
+button:active {
+  transform:translateY(2px);
+  box-shadow: none;
+}
+
+/* ====================
+          ロゴ 
+====================*/
+
+.logo {
+  display: inline-block;
+  font-size:3rem;
+  color:rgba(44, 54, 146, 0.918); 
+  letter-spacing: 4px;
+  animation: logoTitle 2s ease infinite;
+}
+
+@keyframes logoTitle {
+  0%{transform: scale(1);color:rgba(44, 54, 146, 0.918);}
+  50%{transform: scale(1.3);color:rgba(44, 54, 146, 0.493);}
+  100%{transform: scale(1);}
+}
+
+.logo-line {
+  width: 60%;
+  height:3px;
+  margin: 0 auto;
+  margin-bottom: 20px;
+  background:rgba(127, 193, 255, 0.87);
+  animation: none;
+}
+
+/* ====================
+      入力フォーム 
+=====================*/
+
+.input-form {
+  margin:0 auto;
+  width: 600px;
+  height:350px;
+  background: rgba(127, 193, 255, 0.123);
+  border-radius: 10px;
+  box-shadow: 2px 2px 12px rgba(127, 193, 255, 0.918);
+}
+
+.titleStyle {
+  width: 90%;
+  height: 40px;
+  margin-top: 10px;
+  border:2px solid rgba(127, 193, 255, 0.61);
+  border-radius: 8px;
+  cursor:pointer;
+}
+
+.titleStyle:hover {
+  background-color: rgba(0, 0, 0, 0.048);
+}
+
+.authorStyle {
+  width: 90%;
+  height: 40px;
+  margin-top: 10px;
+  border:2px solid rgba(127, 193, 255, 0.61);
+  border-radius: 8px;
+  cursor:pointer;
+}
+
+.authorStyle:hover {
+  background-color: rgba(0, 0, 0, 0.048);
+}
+
+.reviewStyle {
+  width: 90%;
+  height: 100px;
+  margin: 10px;
+  border:2px solid rgba(127, 193, 255, 0.61);
+  border-radius: 8px;
+  cursor:pointer;
+}
+
+.reviewStyle:hover {
+  background-color:rgba(0, 0, 0, 0.048);
+}
+
+.rating-star {
+  display: inline-block;
+  font-size: 2rem;
+  margin: 0 auto;
+}
+
+.rating-star span:hover {
+  cursor: pointer;
+  transform: translateY(-2px);
+}
+
+.add-msg {
+  margin: 10px 0;
+  color:green;
+  font-weight:bold;
+  animation: fadeout 2s ease forwards;
+}
+
+@keyframes fadeout {
+  0% {opacity: 1;}
+  80%{opacity: 1;}
+  100%{opacity: 0;}
+}
+
+/* ====================
+      本棚を開く 
+=====================*/
+
+.library-button {
+  display:inline-block;
+  margin:40px 0;
+  width:20%;
+  line-height: 50px;
+  background-color: rgba(0, 0, 0, 0.089);
+  border:dashed rgba(0, 0, 0, 0.089);
+  border-radius: 20px;
+}
+
+.library-button:hover {
+  cursor: pointer;
+  background-color: rgba(0, 0, 0, 0.116);
+  transform:translateY(-2px);
+}
+
+/* ====================
+          本棚 
+=======================*/
+.library {
+  padding-bottom: 40px;
+}
+
+.book-list {
+  display:grid;
+  grid-template-columns:repeat(auto-fill,minmax(300px,1fr));
+  gap: 20px;
+}
+
+.book-card {
+  padding: 15px;
+  background-color: rgba(127, 193, 255, 0.288);
+  border: solid 1px rgb(0, 119, 255);
+  border-radius: 10px;
+  box-shadow: 2px 2px 12px rgba(127, 193, 255, 0.918);
+}
+
+.book-card strong {
+  display:block;
+  padding: 5px;
+  font-size: 25px;
+  background-color: rgba(0, 0, 255, 0.308);
+}
+
+.book-thumbnail {
+  width: 120px;
+  height: auto;
+  margin: 10px 0;
+  border-radius: 6px;
+  box-shadow: 10px 10px 8px rgba(0, 0, 0, 0.2);
+}
+
+.book-card em {
+  display: block;
+  padding: 10px;
+  font-size: 20px;
+}
+
+.book-card em:nth-of-type(2) {
+  max-height: 100px;
+  overflow-y: auto;
+  display: block;
+  padding: 10px;
+  background-color: rgba(255, 255, 255, 0.3);
+  border-radius: 6px;
+}
+
+.book-card.editing {
+  background-color: rgba(255, 255, 255, 0.6);
+  border: 2px dashed #00bfff;
+}
+
+.book-list-stars {
+  font-size: 20px;
+  margin-top: 10px;
+  margin-bottom: 10px;
+}
+
+/* ====================
+     本棚編集画面
+=====================*/
+
+
+/* ====================
+   本棚編集・削除ボタン 
+=====================*/
+
+.book-card button:nth-of-type(1) {
+  margin:10px;
+  background-color:rgba(255, 153, 0, 0.945);
+}
+
+.book-card button:nth-of-type(2) {
+  margin:10px;
+  background-color: rgba(255, 30, 0, 0.938);
+}
+
+.book-card button:nth-of-type(1):hover {
+  background-color: rgba(255, 153, 0, 0.589);
+}
+
+.book-card button:nth-of-type(2):hover {
+  background-color: rgba(255, 30, 0, 0.637);
+}
+
+@media screen and (max-width: 768px) {
+  body {
+    padding: 0 10px;
   }
-}
 
-.App-header {
-  background-color: #282c34;
-  min-height: 100vh;
-  display: flex;
-  flex-direction: column;
-  align-items: center;
-  justify-content: center;
-  font-size: calc(10px + 2vmin);
-  color: white;
-}
-
-.App-link {
-  color: #61dafb;
-}
-
-@keyframes App-logo-spin {
-  from {
-    transform: rotate(0deg);
+  .input-form {
+    width: 100%;
+    max-width: 600px;
+    margin: 0 auto;
+    padding:20px;
   }
-  to {
-    transform: rotate(360deg);
+
+  .titleStyle,
+  .authorStyle,
+  .reviewStyle {
+    width: 100%;
+    box-sizing: border-box;
+    font-size: 1rem;
+    height: auto;
+    padding: 10px;
+    margin: 10px 0;
+  }
+
+  .library-button {
+    width: 80%;
+    font-size: 1.2rem;
+  }
+
+  .book-list {
+    grid-template-columns: 1fr;
+  }
+
+  .book-card {
+    font-size: 0.9rem;
+  }
+
+  .book-thumbnail {
+    width: 100px;
+  }
+
+  .rating-star {
+    font-size: 1.5rem;
+  }
+
+  button {
+    padding:8px 16px;
+    font-size:0.9rem;
   }
 }
