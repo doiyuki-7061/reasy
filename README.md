@@ -22,9 +22,3 @@
 ・useStateとuseEffectを活用した状態管理とローカル保存
 ・書影の表示で視覚的にもわかりやすいUIを実装
 ・入力フォーム、本棚リスト、評価機能のコンポーネント化によるコードの整理  
-
-### 
-
-### `npm run build` fails to minify
-
-This section has moved here: [https://facebook.github.io/create-react-app/docs/troubleshooting#npm-run-build-fails-to-minify](https://facebook.github.io/create-react-app/docs/troubleshooting#npm-run-build-fails-to-minify)
