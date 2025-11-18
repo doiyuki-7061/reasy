@@ -1,23 +1,23 @@
-# Getting Started with Create React App
+# Reasy - 読書記録管理アプリ  
+公開ページ：https://doiyuki-7061.github.io/reasy/
 
-This project was bootstrapped with [Create React App](https://github.com/facebook/create-react-app).
+## 使用技術  
+・React(UI構築、状態管理)  
+・JavaScript/HTML/CSS  
+・Node.js(開発環境)  
+・Google Books API(書影・著者名の取得)  
 
-## Available Scripts
+### 機能概要
+・書籍のタイトル・感想・評価を入力して保存  
+・保存しにGoogle Books APIから書影と著者名を自動取得  
+・「本棚を開く」ボタンを押すと、記録した読書履歴をリスト表示  
+・ローカルストレージに保存されるため、再読み込み後もデータ保持  
+・記録後の編集・削除機能あり  
 
-In the project directory, you can run:
-
-### `npm start`
-
-Runs the app in the development mode.\
-Open [http://localhost:3000](http://localhost:3000) to view it in your browser.
-
-The page will reload when you make changes.\
-You may also see any lint errors in the console.
-
-### `npm test`
-
-Launches the test runner in the interactive watch mode.\
-See the section about [running tests](https://facebook.github.io/create-react-app/docs/running-tests) for more information.
+### 工夫した点
+・useStateとuseEffectを活用した状態管理とローカル保存
+・書影の表示で視覚的にもわかりやすいUIを実装
+・入力フォーム、本棚リスト、評価機能のコンポーネント化によるコードの整理  
 
 ### `npm run build`
 
